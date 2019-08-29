@@ -23,8 +23,7 @@ export const AllRecipes: React.FunctionComponent = props => {
 
     useEffect(() => {
         const fetchRecipes = async () => {
-            const result = recipeRepository;
-            setRecipes(result.getThreeRandomRecipes());
+            setRecipes(recipeRepository.getThreeRandomRecipes());
         };
         fetchRecipes();
     }, []);
@@ -38,17 +37,17 @@ export const AllRecipes: React.FunctionComponent = props => {
             <Grid container className={classes.root} spacing={2}>
                 <Grid item xs={12}>
                     <Grid container justify="center" spacing={2}>
-                        {recipes.map((allRecipes, id: number) => (
-                            <Grid key={id} item>
+                        {recipes.map((recipe, id: number) => (
+                            <Grid key={recipe.id} item>
                                 <Card className={classes.card}>
                                     <CardActionArea>
-                                        <Link to={"/recipe/" + allRecipes.id}>
-                                            <Typography gutterBottom variant="h5" component="h2">{allRecipes.name}</Typography>
+                                        <Link to={"/recipe/" + recipe.id}>
+                                            <Typography gutterBottom variant="h5" component="h2">{recipe.name}</Typography>
                                         </Link>
                                         <Typography variant="body2" color="textSecondary" component="p">
-                                            Preparation Time: {allRecipes.prepTime}mins | Cooking time: {allRecipes.cookTime}mins
+                                            Preparation Time: {recipe.prepTime}mins | Cooking time: {recipe.cookTime}mins
                                         </Typography>
-                                        <p>{allRecipes.tags}</p>
+                                        <p>{recipe.tags}</p>
                                     </CardActionArea>
                                 </Card>
                             </Grid>
