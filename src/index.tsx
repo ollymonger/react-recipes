@@ -9,7 +9,6 @@ const repositories = initialiseRepositories();
 const App: React.FunctionComponent = () => {
     return (
         <Router>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
             <RepositoriesContext.Provider value={repositories}>
                 <Route path="/" exact component={AllRecipes} />
             </RepositoriesContext.Provider>
