@@ -37,8 +37,8 @@ export const AllRecipes: React.FunctionComponent = props => {
             <Grid container className={classes.root} spacing={2}>
                 <Grid item xs={12}>
                     <Grid container justify="center" spacing={2}>
-                        {recipes.map((recipe, index: number) => (
-                            <Grid key={index} item>
+                        {recipes.map((recipe, id: number) => (
+                            <Grid key={recipe.id} item>
                                 <Card className={classes.card}>
                                     <CardActionArea>
                                         <Link to={"/recipe/" + recipe.id}>
