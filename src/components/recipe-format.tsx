@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import { RecipeModel } from "../../data/recipe-model";
+import { RecipeModel } from "../data/recipe-model";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Card, CardActionArea, CardContent, Typography, Theme, makeStyles, createStyles, Grid, Button } from "@material-ui/core";
 

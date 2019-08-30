@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { RecipeModel } from "../data/recipe-model";
-import { RecipeFormat } from "./Recipes/recipe-format";
+import { RecipeFormat } from "./recipe-format";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { RouteComponentProps } from "react-router";
 import { RepositoriesContext } from "../context";
