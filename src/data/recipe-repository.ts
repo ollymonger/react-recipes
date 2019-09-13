@@ -62,6 +62,9 @@ export class RecipeRepository {
     }
 
     public getById(id: string) {
-        throw Error("Not implemented");
+        const recipe = this.recipes.find(function(recipeID) {
+            return recipeID.id;
+        });
+        return recipe;
     }
 }
